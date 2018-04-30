@@ -1,0 +1,13 @@
+1.  On the phone, make a backup of all data (since during the upgrade all data will be erased). This is an obligatory condition.
+2. Unlock your bootloader: (There´s no way around it (unfortnuately), but after the procedure your device will be locked again, so don´t worry!). The device will make a factory reset, so once again, BACKUP your files!!!!!!!!!!
+3. Enable ‘USB debugging’ and ‘OEM Unlock’ option from setting>developer option>. To enable Developer Options, go to About phone and tap the Build Number 7 times.
+4. You must download three zip-archives with a full "Full OTA" firmware on which you want to flash (If you look through in the FF (FirmwareFinder), you see there are 4 archives for China and 3 for other locations. You must to download for the version what model and location you will have after the firmware);
+5. Add the downloaded files to the folder "HWOTA\Update" and run the .cmd file, it will rename them automatically according to the template:
+     - update_data_full_public.zip to update_data_public.zip
+     - update_full_....zip to update_all_hw.zip
+     - update.zip don't rename
+6. After run the universal batch file update.bat in the "HWOTA" folder, which will provide an opportunity to choose the required work option (change firmware/rebranding (change location)). FOLLOWING INSTRUCTIONS ON THE SCREEN OF THE MONITOR - the entire process is accompanied by prompts.
+At the end of the process, everything should work fine... Be prepared, the bootloader will be locked after changing the location or firmware as a FullOTA.
+7.  If suddenly it turned out "bootloop" - go into the stock Recovery and make wipe.
+
+PS: To change the firmware using the SD card, you need to create a folder "HWOTA" on the SD card and copy three firmware archives with the changed names (see above). In the batch file select item 1 "SDCard HWOTA directory"
